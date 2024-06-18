@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Real-Time Flood Monitoring</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+</head>
+<body>
+    <div class="container">
+        <h1>Real-Time Flood Monitoring</h1>
+        <div id="map"></div>
+        <div id="weather-info">
+            <h1>Weather Information</h1>
+            <p>Description: <span id="description"></span></p>
+            <p>Temperature: <span id="temperature"></span> °C</p>
+            <p>Humidity: <span id="humidity"></span> %</p>
+            <p>Wind Speed: <span id="wind-speed"></span> m/s</p>
+            <p>Wind Direction: <span id="wind-direction"></span> °</p>
+        </div>
+        <div id="chart-container">
+            <canvas id="rainfall-chart"></canvas>
+        </div>
+    </div>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/heatmap.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+</body>
+</html>
